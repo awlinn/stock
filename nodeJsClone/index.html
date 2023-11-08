@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Article</title>
+</head>
+<body class="dark-mode">
+    <div id="formDiv">
+        <p id="outText"></p>
+        <h2>Add New Article:</h2>
+        <form action="/add" method="POST">
+            <input type="text" name="author" placeholder="Author">
+            <label for="content" >Content:</label>
+            <textarea name="content" id="content"></textarea>
+            <input type="submit" value="Add">
+        </form>
+    </div>
+
+    <button class="toggle-button light-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const toggleButton = document.querySelector('.toggle-button');
+            
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                toggleButton.classList.remove('light-mode');
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                toggleButton.classList.add('light-mode');
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        #formDiv {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        
+        h2 {
+            margin-bottom: 10px;
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        input[type="text"],
+        textarea {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        input[type="submit"] {
+            width: 100px;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        .dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .dark-mode #formDiv {
+            background-color: #222;
+        }
+        
+        .dark-mode h2 {
+            color: #fff;
+        }
+        
+        .dark-mode input[type="text"],
+        .dark-mode textarea {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #555;
+        }
+        
+        .dark-mode input[type="submit"] {
+            background-color: #555;
+        }
+        
+        .dark-mode input[type="submit"]:hover {
+            background-color: #444;
+        }
+        
+        .light-mode {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        .light-mode #formDiv {
+            background-color: #f2f2f2;
+        }
+        
+        .light-mode h2 {
+            color: #333;
+        }
+        
+        .light-mode input[type="text"],
+        .light-mode textarea {
+            background-color: #f2f2f2;
+            color: #000;
+            border: 1px solid #ccc;
+        }
+        
+        .light-mode input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        
+        .light-mode input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        .toggle-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .toggle-button.light-mode {
+            background-color: #fff;
+            color: #000;
+            border: solid rgb(255, 255, 255) 1px;
+        }
+        
+        .toggle-button.light-mode:hover {
+            background-color: #000;
+            color: #fff;
+            border: solid rgb(255, 255, 255) 1px;
+        }
+
+        #content{
+            width: 424px; 
+            height: 125px;
+        }
+    </style>
+
+</body>
+</html>

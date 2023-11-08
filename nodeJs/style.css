@@ -1,0 +1,75 @@
+* {
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url(https://github.com/blacksempai/robojoke-website-example/blob/main/background.jpg?raw=true);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 0.5rem 2rem 4rem;
+    background-image: url(https://raw.githubusercontent.com/blacksempai/robojoke-website-example/e7ae56742ea193f552d3e29227e563f87b0d248e/header.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.header__img {
+    height: 18vh;
+}
+
+main {
+    background-image: url(https://raw.githubusercontent.com/blacksempai/robojoke-website-example/e7ae56742ea193f552d3e29227e563f87b0d248e/main.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: unset;
+    width: 85vw;
+    height: 72vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px; 
+}
+
+#formInput {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+    outline: none;
+}
+
+input[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+h2{
+    margin-left: 10px;
+}
