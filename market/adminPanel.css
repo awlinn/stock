@@ -1,0 +1,112 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    /* black theme */
+    
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+.bodyCenter{
+    margin-top: 40vh;
+}
+
+#logIn { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    margin-bottom: 10px;
+}
+
+.module{
+    display: inline;
+}
+#main{
+    display: none;
+    height: 100%;
+    grid-template-columns: 1fr 3fr;
+}
+
+.createItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 25%;
+    border-right: 1px solid black;
+    grid-column: 1 / 2; 
+}
+
+.orders{
+    display: grid;
+    grid-column: 2 / 3; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;   
+    grid-gap: 10px;
+    height: 100%;   
+    width: 100%;
+    margin-top: 1px;
+}
+
+.tile {
+    height: fit-content;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    max-width: 600px;
+    word-wrap: break-word;
+    text-align: left;
+  }
+  
+.tile>*{
+    padding: 1px;
+}
+
+  h2 {
+    margin-top: 0;
+  }
+  
+  button {
+    background-color: #f2f2f2;
+    border: none;
+    color: black;
+    background-color: pink;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+.statusText{
+    color: red;
+}
+
+.productsText{
+    color: rgb(0, 196, 0);
+}
+  

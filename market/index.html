@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="image/x-icon" href="https://www.pngplay.com/wp-content/uploads/4/Shopping-Cart-PNG-Free-File-Download.png" rel="shortcut icon">      
+    <link href="style.css" rel="stylesheet">
+    <script src="jsAwllin.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="popup">
+		<h1>payment window</h1>
+		<p>please enter your details</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+                <br>
+            <label for="address">Address:</label>
+            <input type="text" id="address">
+                <br>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone">
+                <br>
+            <label for="post_number">Post number:</label>
+            <input type="text" id="post_number">
+               <!-- <br>
+            <label for="status">Status:</label>
+            <input type="text" id="status">
+                <br>
+            <label for="products">Products:</label>
+            <input type="text" id="products"> -->
+            <br>
+            <button id="sendData">Отправить</button>
+	</div>
+    <div class="heder">
+
+        <h1>Robocode Marketplace</h1>
+
+        <div class="basket" id="basketDivId">
+            <img class="basketImg" src="https://www.freeiconspng.com/uploads/grocery-basket-icon-3.png" onclick="openBasket()">
+        </div>
+        <div id="cartBasket">
+            <div id="inBasket"><p class="emptyCartText">Cart is empty</p></div>
+        </div>
+    </div>
+    <main>
+        <div id="market"></div>
+    </main>    
+</body>
+</html>
